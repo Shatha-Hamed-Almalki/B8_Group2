@@ -16,9 +16,9 @@ public class main {
     public static void main(String[] args) {
         System.out.println("Hi,I am Shatha Hamed Almalki"); 
         System.out.println("Hello, I'm Sara");
-        System.out.println("Hi, I'm Raghad Alshehri");
         System.out.println("Alsalam alikoum, I am GHALA");
-        
+        System.out.println("Hello, I'm Raghad Alshehri");
+
     
     }
     
