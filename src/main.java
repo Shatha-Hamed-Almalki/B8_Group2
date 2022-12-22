@@ -18,7 +18,8 @@ public class main {
         System.out.println("Hello, I'm Sara");
         System.out.println("Alsalam alikoum, I am GHALA");
         System.out.println("Hello, I'm Raghad Alshehri");
-System.out.println("Alsalam alikoum, I am GHALA Almalki");
+        System.out.println("Alsalam alikoum, I am GHALA Almalki");
+        System.out.println("hii , i'm Wafaa Abrii ");
     
     }
     
