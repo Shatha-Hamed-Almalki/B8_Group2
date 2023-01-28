@@ -1,26 +1,45 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author hp
- */
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class main {
+ 
+    public static void main(String[] args) throws FileNotFoundException {
+        File InputFile = new File("input.txt");
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        System.out.println("Hi,I am Shatha Hamed Almalki"); 
-        System.out.println("Hello, I'm Sara");
-        System.out.println("Alsalam alikoum, I am GHALA");
-        System.out.println("Hello, I'm Raghad Alshehri");
-        System.out.println("Alsalam alikoum, I am GHALA Almalki");
-        System.out.println("hii , i'm Wafaa Abrii ");
-    
+        if (!InputFile.exists()) {
+            throw new FileNotFoundException("The File is not exist");
+        }
+        
+        Scanner input1 = new Scanner(InputFile);
+        Scanner input2 = new Scanner(System.in);
+        ArrayList<Book> list = new ArrayList<>();
+        while (input1.hasNext()){
+            //save book informathion
+            String BookName = input1.nextLine();
+            String AuthorName = input1.nextLine();
+            String BookType = input1.nextLine();
+            String BookPrice = input1.nextLine();
+            String NumberOFAvalibleCopies = input1.nextLine();
+            String BookState = input1.nextLine();
+            //Add info to array list
+            list.add(new Book(BookName, AuthorName, BookType, Double.parseDouble(BookPrice), Integer.parseInt(NumberOFAvalibleCopies),BookState));
+
+        }
+        //object from customer class type
+        Customer ob = new Customer();
+        System.out.print("Enter the book name to search pleese :");
+        String name = input2.nextLine();
+        //call search method
+        Book result = ob.searchForLawyer(name, list);
+        if (result == null) {
+            System.out.println("The book is not founded!");
+        } else {
+            System.out.println(result.toString());
+        }
+
     }
-    
 }
+
