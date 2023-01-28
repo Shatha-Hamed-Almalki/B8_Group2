@@ -2,11 +2,21 @@
 
 
 public class Order {
-//order info
-String OrderID;  
-String OrderDate; 
-String OrderDetiels;
-float PriceSum;
+
+//order info    
+   String OrderID;  
+   String OrderDate; 
+   String OrderDetiels;
+   double PriceSum;
+
+    
+//constructor
+   public Order(String OrderID, String OrderDate, String OrderDetiels, double PriceSum) {
+        this.OrderID = OrderID;
+        this.OrderDate = OrderDate;
+        this.OrderDetiels = OrderDetiels;
+        this.PriceSum = PriceSum;
+    }
 
 
 //Getters and setters
@@ -22,7 +32,7 @@ float PriceSum;
         return OrderDetiels;
     }
 
-    public float getPriceSum() {
+    public double getPriceSum() {
         return PriceSum;
     }
 
@@ -38,7 +48,7 @@ float PriceSum;
         this.OrderDetiels = OrderDetiels;
     }
 
-    public void setPriceSum(float PriceSum) {
+    public void setPriceSum(double PriceSum) {
         this.PriceSum = PriceSum;
     }
 

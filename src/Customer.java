@@ -3,14 +3,14 @@
 import java.util.ArrayList;
 
 public class Customer {
-   //user info
+   //Customer info
     String CustomerName = null;
     String CustomerPassword = null;
     String CustomerEmail = null;
-    int CustomerPhone;
+    String CustomerPhone;
     int CustomerID;
     
-   
+     
    //Getters and setters
     public void setCustomerName(String CustomerName) {
         this.CustomerName = CustomerName;
@@ -24,7 +24,7 @@ public class Customer {
         this.CustomerEmail = CustomerEmail;
     }
 
-    public void setCustomerPhone(int CustomerPhone) {
+    public void setCustomerPhone(String CustomerPhone) {
         this.CustomerPhone = CustomerPhone;
     }
 
@@ -44,7 +44,7 @@ public class Customer {
         return CustomerEmail;
     }
 
-    public int getCustomerPhone() {
+    public String getCustomerPhone() {
         return CustomerPhone;
     }
 

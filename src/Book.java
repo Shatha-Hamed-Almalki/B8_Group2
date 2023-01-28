@@ -1,7 +1,7 @@
 
 
 public class Book  {
-    //book info
+//book info
     String BookName;
     String AuthorName;
     String BookType;
