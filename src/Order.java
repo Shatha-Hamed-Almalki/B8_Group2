@@ -1,23 +1,25 @@
 
-
+import java.util.ArrayList;
 
 public class Order {
 
 //order info    
-   String OrderID;  
-   String OrderDate; 
-   String OrderDetiels;
-   double PriceSum;
+    private String OrderID;
+    private String OrderDate;
+    private String OrderDetiels;
+    private double PriceSum;
+    private ArrayList<Book> books = new ArrayList<>();
 
-    
+    public Order() {
+    }
+
 //constructor
-   public Order(String OrderID, String OrderDate, String OrderDetiels, double PriceSum) {
+    public Order(String OrderID, String OrderDate, String OrderDetiels, double PriceSum) {
         this.OrderID = OrderID;
         this.OrderDate = OrderDate;
         this.OrderDetiels = OrderDetiels;
         this.PriceSum = PriceSum;
     }
-
 
 //Getters and setters
     public String getOrderID() {
@@ -33,7 +35,12 @@ public class Order {
     }
 
     public double getPriceSum() {
-        return PriceSum;
+        double price = 0.0;
+        for (int i = 0; i < this.books.size(); i++) {
+            price += this.books.get(i).getBookPrice();
+        }
+        
+        return price;
     }
 
     public void setOrderID(String OrderID) {
@@ -50,6 +57,20 @@ public class Order {
 
     public void setPriceSum(double PriceSum) {
         this.PriceSum = PriceSum;
+    }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
+    }
+    
+    
+
+    public void addBook(Book b) {
+        this.books.add(b);
     }
 
 }
