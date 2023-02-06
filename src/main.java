@@ -31,7 +31,7 @@ public class main {
 
         }
         //object from customer class type
-        ob = new Customer();
+        ob = new Customer(1, "raghad hezam", "Ab12345", "rh@hotmail.com", "0534672588", "jeddah, alajwad");
         order = new Order();
 
         while (true) {
@@ -44,6 +44,7 @@ public class main {
             System.out.println("2.  view order details");
             System.out.println("3.  checkout");
             System.out.println("4.  rating ");
+            System.out.println("5.  Update account");
             System.out.println("0.  exite");
             System.out.print("Enter number: ");
             int menueInput = Integer.parseInt(input2.nextLine().trim());
@@ -79,14 +80,52 @@ public class main {
                 
                 System.out.println("");
                 
-            }else if (menueInput == 2) {
+            }
+            
+            else if (menueInput == 2) {
                 System.out.println("your order information ");
                 for (int i = 0; i < order.getBooks().size(); i++) {
                     System.out.println(order.getBooks().get(i));
                 }
                 System.out.println("total price: "+order.getPriceSum());
                 System.out.println("");
-            }else if (menueInput == 0) {
+            }
+            
+            else if (menueInput == 5) {
+                System.out.println("please choose what you want to update: ");
+                System.out.println("1.  email");
+                System.out.println("2.  phone number");
+                System.out.println("3.  address");
+                System.out.print("Enter number: ");
+                int infoUpdate = Integer.parseInt(input2.nextLine().trim());
+                
+                if (infoUpdate == 1){
+                    System.out.println("you current email is " + ob.getCustomerEmail());
+                    System.out.print("please inter your new email: ");
+                    String newEmail = input2.nextLine();
+                    ob.setCustomerEmail(newEmail);
+                    System.out.println("you new email is " + ob.getCustomerEmail());
+                }
+                
+                if(infoUpdate == 2){
+                    System.out.println("you current phone number is " + ob.getCustomerPhone());
+                    System.out.print("please inter your new number: ");
+                    String newPhone = input2.nextLine();
+                    ob.setCustomerPhone(newPhone);
+                    System.out.println("you new phone number is " + ob.getCustomerPhone());
+                }
+                
+                if(infoUpdate == 3){
+                    System.out.println("you current address is " + ob.getCustomerAddress());
+                    System.out.print("please inter your new address: ");
+                    String newAddress = input2.nextLine();
+                    ob.setCustomerAddress(newAddress);
+                    System.out.println("you new addres is " + ob.getCustomerAddress());
+                }
+
+            }
+            
+            else if (menueInput == 0) {
                 System.out.println("thank you for using our system, goodbye ");
                 System.exit(0);
             }

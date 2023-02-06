@@ -8,10 +8,22 @@ public class Customer {
     String CustomerPassword = null;
     String CustomerEmail = null;
     String CustomerPhone;
+    String CustomerAddress;
     int CustomerID;
     
-     
-   //Getters and setters
+    
+    //constructor
+    public Customer(int CustomerID, String CustomerName, String CustomerPassword, String CustomerEmail, String CustomerPhone, String CustomerAddress) {
+        this.CustomerID = CustomerID;
+        this.CustomerName = CustomerName;
+        this.CustomerPassword = CustomerPassword;
+        this.CustomerEmail = CustomerEmail;
+        this.CustomerPhone = CustomerPhone;
+        this.CustomerAddress = CustomerAddress;
+    }
+    
+
+    //Getters and setters
     public void setCustomerName(String CustomerName) {
         this.CustomerName = CustomerName;
     }
@@ -28,6 +40,10 @@ public class Customer {
         this.CustomerPhone = CustomerPhone;
     }
 
+    public void setCustomerAddress(String CustomerAddress) {
+        this.CustomerAddress = CustomerAddress;
+    }
+    
     public void setCustomerID(int CustomerID) {
         this.CustomerID = CustomerID;
     }
@@ -46,6 +62,10 @@ public class Customer {
 
     public String getCustomerPhone() {
         return CustomerPhone;
+    }
+    
+    public String getCustomerAddress(){
+        return CustomerAddress;
     }
 
     public int getCustomerID() {
