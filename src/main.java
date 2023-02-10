@@ -94,8 +94,8 @@ public class main {
                         continue;
                     }   if (bookAction == 1) {
                         order.addBook(userBook);
-                        System.out.println("Book is added successfully !\n");
-                    }   System.out.println("");
+                        System.out.println("\nBook is added successfully !\n");
+                    }   
                     break;
                 case 2:
                     System.out.println("");
@@ -104,6 +104,7 @@ public class main {
                     System.out.println("-------------------------------------");
                     for (int i = 0; i < order.getBooks().size(); i++) {
                         System.out.println(order.getBooks().get(i));
+                        System.out.println("-------------------------------------");
                     }   System.out.println("");
                     System.out.println("total price: "+order.getPriceSum());
                     System.out.println("");
@@ -122,25 +123,28 @@ public class main {
                         System.out.print("please enter your new email: ");
                         String newEmail = input2.nextLine();
                         ob.setCustomerEmail(newEmail);
+                        System.out.println("---------------------------------------------");
                         System.out.println("The email has been updated successfully!");
-                        System.out.println("your new email is " + ob.getCustomerEmail());
+                        System.out.println("your new email is " + ob.getCustomerEmail()+"\n");
                     }   if(infoUpdate == 2){
                         System.out.println("#nyour current phone number is: " + ob.getCustomerPhone());
                         System.out.print("please inter your new number: ");
                         String newPhone = input2.nextLine();
                         ob.setCustomerPhone(newPhone);
+                        System.out.println("---------------------------------------------");
                         System.out.println("The phone number has been updated successfully!");
-                        System.out.println("you new phone number is " + ob.getCustomerPhone());
+                        System.out.println("you new phone number is " + ob.getCustomerPhone()+"\n");
                     }   if(infoUpdate == 3){
                         System.out.println("your current address is " + ob.getCustomerAddress());
                         System.out.print("please inter your new address: ");
                         String newAddress = input2.nextLine();
                         ob.setCustomerAddress(newAddress);
+                        System.out.println("---------------------------------------------");
                         System.out.println("The addres has been updated successfully!");
-                        System.out.println("your new addres is " + ob.getCustomerAddress());
+                        System.out.println("your new addres is " + ob.getCustomerAddress()+"\n");
                     }   break;
                 case 4:
-                    System.out.println("Choose your payement method: ");
+                    System.out.println("\n** please choose your payment method ** ");
                     System.out.println("-----------------------");
                     System.out.println("1. Cash on delivery");
                     System.out.println("2. Crediet Card");
@@ -149,12 +153,13 @@ public class main {
                     int PaymantMethod = input2.nextInt();
                     
                     if (PaymantMethod == 1){
-                        System.out.println("You choose to pay in cash on delivery.");
+                        System.out.println("\nYou choose to pay cash on delivery.");
                         
                         System.out.println("The total is price: "+order.getPriceSum() + " SR");
                         System.out.println("");
                         //
-                        System.out.println("Thank you, your order number is: "+orderNum);
+                        System.out.println("             ***********                     ");
+                        System.out.println("Thank you, your order number is: "+orderNum +"\n" );
                         writeNum.append(String.valueOf(orderNum)+"\n");
                         writeNum.close();
                        
@@ -164,7 +169,7 @@ public class main {
                         String CardNum="" ;
                         Scanner input3 = new Scanner(System.in);
                         while((CardNum.length() != 16)){
-                            System.out.print("Enter your card number: "+"Hint: Your card number must be 16 digits: ");
+                            System.out.print(" \nEnter your card number: "+ " ** Hint Your card number must be 16 digits ** :");
                            
                             CardNum = input3.nextLine();
                             if(CardNum.length() == 16){
@@ -186,7 +191,7 @@ public class main {
                         
                         String CCV="";
                         while (CCV.length() != 3){
-                            System.out.print("Enter the CVV code: ");
+                            System.out.print("Enter the CVV code: ** Hint Your CVV must be 3 digits ** :");
                             CCV = input3.nextLine();
                             if(CCV.length()==3){
                              break;
@@ -196,13 +201,13 @@ public class main {
                         }
                         
                         
+                         System.out.println("---------------------------------------------");
+                        System.out.println("            PAYMENT SUCCESSFUL!                ");
+                        System.out.println("---------------------------------------------");
                         System.out.println("");
-                        System.out.println("PAYMENT SUCCESSFUL!");
-                        System.out.println("");
-                        System.out.println("\nAmount paid " + order.getPriceSum() + " SR");
-                        System.out.println("");
+                        System.out.println("Amount paid " + order.getPriceSum() + " SR");
                         System.out.println("your order number is: "+orderNum);
-                        System.out.println("\n**************Thank you for using our store********");
+                        System.out.println("\n********Thank you for using our store********");
                         System.out.println("");
                         
                         writeNum.append(String.valueOf(orderNum)+"\n");
@@ -219,7 +224,7 @@ public class main {
                 case 5:
                     Scanner input = new Scanner(System.in);
                     Scanner scan = new Scanner(myFile);
-                    System.out.println("Please enter your order number:");
+                    System.out.print("Please enter your order number:");
                     String yourOrdernum = input.next();
                     boolean exist = false;
                     while (scan.hasNextLine()){
@@ -230,14 +235,14 @@ public class main {
                             break;
                         }
                     }   if (exist==true){
-                        System.out.println("Your order waits to be rated");
+                        System.out.println("\nYour order waits to be rated");
                         System.out.println("Please rate your overall satisfaction by entering the stars between 1 and 5:");
-                        System.out.println("***Notes that 1 means Highly Dissatisfied and 5 means Highly Satisfied***");
+                        System.out.println("***Notes that 1 means Highly Unssatisfied and 5 means Highly Satisfied***");
                         Rating rating = new Rating();
                         int stars =rating.Stars();
                          System.out.println("Please give us any notes/ recommendations:");
                         String rate = rating.Rate();
-                        System.out.println("We have recieved your feedback!");
+                        System.out.println("\nWe have recieved your feedback!\n");
                         // save rating on the file
                         FileWriter writer = new FileWriter("Rating.txt", true);
                         try {
