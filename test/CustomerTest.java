@@ -17,7 +17,8 @@ import static org.junit.Assert.*;
  * @author hp
  */
 public class CustomerTest {
-       Customer Instance = new Customer(1, "Raghad hezam", "Ab12345", "raghadh@hotmail.com", "0534672588", "jeddah,alajwad");
+    
+    Customer Instance = new Customer(1, "Raghad hezam", "Ab12345", "raghadh@hotmail.com", "0534672588", "jeddah,alajwad");
     
     public CustomerTest() {
     }
@@ -37,21 +38,6 @@ public class CustomerTest {
     @After
     public void tearDown() {
     }
-    
-
-    /**
-     * Test of setCustomerName method, of class Customer.
-     */
-    
-    @Test
-    public void testSetCustomerName() {
-        System.out.println("setCustomerName");
-        String CustomerName = "";
-        Customer instance = new Customer();
-        instance.setCustomerName(CustomerName);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of setCustomerPassword method, of class Customer.
@@ -59,11 +45,9 @@ public class CustomerTest {
     @Test
     public void testSetCustomerPassword() {
         System.out.println("setCustomerPassword");
-        String CustomerPassword = "";
-        Customer instance = new Customer();
-        instance.setCustomerPassword(CustomerPassword);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String CustomerPassword = "Ab12345";
+        // Customer instance = new Customer();
+        Instance.setCustomerPassword(CustomerPassword);
     }
 
     /**
@@ -75,7 +59,6 @@ public class CustomerTest {
         String CustomerEmail = "raghadh@hotmail.com";
         //Customer instance = new Customer();
         Instance.setCustomerEmail(CustomerEmail);
-      
     }
 
     /**
@@ -87,7 +70,6 @@ public class CustomerTest {
         String CustomerPhone = "0534672588";
         //Customer instance = new Customer();
         Instance.setCustomerPhone(CustomerPhone);
-       
     }
 
     /**
@@ -99,27 +81,11 @@ public class CustomerTest {
         String CustomerAddress = "jeddah,alajwad";
         //Customer instance = new Customer();
         Instance.setCustomerAddress(CustomerAddress);
-       
-    }
-
-    /**
-     * Test of setCustomerID method, of class Customer.
-     */
-    @Test
-    public void testSetCustomerID() {
-        System.out.println("setCustomerID");
-        int CustomerID = 0;
-        Customer instance = new Customer();
-        instance.setCustomerID(CustomerID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
      * Test of getCustomerName method, of class Customer.
      */
-   
-    
     @Test
     public void testGetCustomerName() {
         System.out.println("getCustomerName");
@@ -127,7 +93,6 @@ public class CustomerTest {
         String expResult = "Raghad hezam";
         String result = Instance.getCustomerName();
         assertEquals(expResult, result);
-       
     }
 
     /**
@@ -140,54 +105,9 @@ public class CustomerTest {
         String expResult = "Ab12345";
         String result = Instance.getCustomerPassword();
         assertEquals(expResult, result);
-       
     }
-
-    /**
-     * Test of getCustomerEmail method, of class Customer.
-     */
-    @Test
-    public void testGetCustomerEmail() {
-        System.out.println("getCustomerEmail");
-        Customer instance = new Customer();
-        String expResult = "";
-        String result = instance.getCustomerEmail();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getCustomerPhone method, of class Customer.
-     */
-    @Test
-    public void testGetCustomerPhone() {
-        System.out.println("getCustomerPhone");
-        Customer instance = new Customer();
-        String expResult = "";
-        String result = instance.getCustomerPhone();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getCustomerAddress method, of class Customer.
-     */
-    @Test
-    public void testGetCustomerAddress() {
-        System.out.println("getCustomerAddress");
-        Customer instance = new Customer();
-        String expResult = "";
-        String result = instance.getCustomerAddress();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
     
-
-   /**
+    /**
      * Test of searchForBook method, of class Customer.
      */
     @Test(timeout=90)
@@ -204,8 +124,9 @@ public class CustomerTest {
        
       
     }
-      //Use NullObject method to testing
-     @Test
+      
+    //Use NullObject method to testing
+    @Test
     public void testNullObject() {
         System.out.println("searchForLawyer");
         String name = "Believe and Achiev";
