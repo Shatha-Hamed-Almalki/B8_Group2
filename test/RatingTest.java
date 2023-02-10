@@ -11,10 +11,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author saraz
- */
 public class RatingTest {
     
     public RatingTest() {
@@ -37,29 +33,55 @@ public class RatingTest {
     }
 
     /**
-     * Test of Stars method, of class Rating.
+     * Test of getStars method, of class Rating.
      */
     @Test
-    public void testStars() {
-        System.out.println("Stars");
+    public void testGetStars() {
+        System.out.println("getStars");
         Rating instance = new Rating();
         int expResult = 0;
-        int result = instance.Stars();
+        int result = instance.getStars();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of Rate method, of class Rating.
+     * Test of setStars method, of class Rating.
      */
     @Test
-    public void testRate() {
-        System.out.println("Rate");
+    public void testSetStars() {
+        System.out.println("setStars");
+        int stars = 0;
+        Rating instance = new Rating();
+        instance.setStars(stars);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getRate method, of class Rating.
+     */
+    @Test
+    public void testGetRate() {
+        System.out.println("getRate");
         Rating instance = new Rating();
         String expResult = "";
-        String result = instance.Rate();
+        String result = instance.getRate();
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setRate method, of class Rating.
+     */
+    @Test
+    public void testSetRate() {
+        System.out.println("setRate");
+        String rate = "";
+        Rating instance = new Rating();
+        instance.setRate(rate);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

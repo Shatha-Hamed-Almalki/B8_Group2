@@ -47,3 +47,43 @@ Customer comment: good
 **********Order 33 Rating:**********
 2 stars out of 5
 Customer comment: good
+
+**********Order 33 Rating:**********
+5 stars out of 5
+Customer comment: 
+
+**********Order 33 Rating:**********
+2 stars out of 5
+Customer comment: very good
+
+**********Order 33 Rating:**********
+3 stars out of 5
+Customer comment: bad
+
+**********Order 33 Rating:**********
+5 stars out of 5
+Customer comment: good
+
+**********Order 33 Rating:**********
+2 stars out of 5
+Customer comment: great
+
+**********Order 39 Rating:**********
+1 stars out of 5
+Customer comment: very good
+
+**********Order 39 Rating:**********
+3 stars out of 5
+Customer comment: great
+
+**********Order 39 Rating:**********
+3 stars out of 5
+Customer comment: good
+
+**********Order 39 Rating:**********
+3 stars out of 5
+Customer comment: good
+
+**********Order 39 Rating:**********
+3 stars out of 5
+Customer comment: good
