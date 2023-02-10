@@ -90,24 +90,6 @@ public class Customer {
 
         return null;
     }
-  /*      
-  public static Customer Login(String username,String password) {
-         
-
-        //search for the user and return it
-        
-       user1=main.user;
-        for (int i = 0; i < user1.size(); i++) {
-            if (user1.get(i).getCustomerPassword().equals(password) && user1.get(i).getCustomerName().equals(username)) {
-                // numUser = i;
-                return user1.get(i);
-            }
-        }
-
-        return null;
-    
-    
-}
-*/
+ 
 }
 
