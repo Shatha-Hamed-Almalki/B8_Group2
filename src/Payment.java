@@ -1,6 +1,4 @@
 
-
-
 public class Payment {
     //payment info
     String CardNum;  

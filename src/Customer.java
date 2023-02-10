@@ -11,7 +11,8 @@ public class Customer {
     String CustomerAddress;
     int CustomerID;
     
-    
+       static ArrayList<Customer> user1 = new ArrayList<>();
+
     //constructor
     public Customer(int CustomerID, String CustomerName, String CustomerPassword, String CustomerEmail, String CustomerPhone, String CustomerAddress) {
         this.CustomerID = CustomerID;
@@ -20,6 +21,13 @@ public class Customer {
         this.CustomerEmail = CustomerEmail;
         this.CustomerPhone = CustomerPhone;
         this.CustomerAddress = CustomerAddress;
+    }
+ public Customer( String CustomerName, String CustomerPassword) {
+       
+        this.CustomerName = CustomerName;
+        this.CustomerPassword = CustomerPassword;
+ }
+    public Customer() {
     }
     
 
@@ -73,14 +81,33 @@ public class Customer {
     }
    
    //Method to check if the name of the book that the customer searched for is in stock
-    public Book searchForLawyer(String name, ArrayList<Book> list ) {
-        
-        for(int i=0;i<list.size();i++){
-            if(name.equalsIgnoreCase(list.get(i).getBookName()))
-                return list.get(i);
+        public Book searchForBook(ArrayList<Book> bookList, String name) {
+        for (int i = 0; i < bookList.size(); i++) {
+            if (bookList.get(i).getBookName().equalsIgnoreCase(name)) {
+                return bookList.get(i);
+            }
         }
+
         return null;
     }
- 
+  /*      
+  public static Customer Login(String username,String password) {
+         
+
+        //search for the user and return it
+        
+       user1=main.user;
+        for (int i = 0; i < user1.size(); i++) {
+            if (user1.get(i).getCustomerPassword().equals(password) && user1.get(i).getCustomerName().equals(username)) {
+                // numUser = i;
+                return user1.get(i);
+            }
+        }
+
+        return null;
+    
+    
+}
+*/
 }
 
