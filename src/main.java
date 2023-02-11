@@ -149,6 +149,7 @@ public class main {
                     }
                     break;
                 case 4:
+                    
                     System.out.println("\n** please choose your payment method ** ");
                     System.out.println("-----------------------");
                     System.out.println("1. Cash on delivery");
@@ -216,10 +217,9 @@ public class main {
                         writeNum.close();
                         writeNum.flush();
 
-                        System.exit(0);
-                    } else if (PaymantMethod != 1 || PaymantMethod != 2) {
-                        System.out.println("Wrong number, Try again!");
-                        System.exit(0);
+                       
+                    } else if (PaymantMethod !=1 || PaymantMethod != 2) {
+                        System.out.println("Wrong number, Try again!"); 
                     }
                     break;
                 case 5:
@@ -246,17 +246,17 @@ public class main {
                             rating.setStars(input.nextInt());
                             if (rating.getStars() <1 ||rating.getStars() >5 ) {
                                 System.out.println("\n--------------------------------------");
-                                System.out.println("please give a rating between 1 and 5");
+                                System.out.print("please give a rating between 1 and 5");
                                 System.out.println("--------------------------------------");
                                 continue;
                             }
                             
                             System.out.println("Please give us any notes/ recommendations:");
-                            input5.nextLine();
+                            input.nextLine();
                             rating.setRate(input.nextLine());
                             System.out.println("\n--------------------------------------");
                             System.out.println("We have recieved your feedback!");
-                            System.out.println("Thank you for using our system <3\n");
+                            System.out.println("***Thank you for using our system***\n");
                         
                             
                             // save rating on the file
@@ -277,7 +277,7 @@ public class main {
                     }
                     break;
                 case 0:
-                    System.out.println("thank you for using our system, goodbye ");
+                    System.out.println("***Thank you for using our system, goodbye*** ");
                     System.exit(0);
                 default:
                     break;
