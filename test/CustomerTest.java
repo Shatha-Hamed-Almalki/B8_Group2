@@ -38,10 +38,8 @@ public class CustomerTest {
     @After
     public void tearDown() {
     }
-
-    /**
-     * Test of setCustomerPassword method, of class Customer.
-     */
+    
+    // Test of setCustomerPassword method, of class Customer.    
     @Test
     public void testSetCustomerPassword() {
         System.out.println("setCustomerPassword");
@@ -49,10 +47,8 @@ public class CustomerTest {
         // Customer instance = new Customer();
         Instance.setCustomerPassword(CustomerPassword);
     }
-
-    /**
-     * Test of setCustomerEmail method, of class Customer.
-     */
+   
+    // Test of setCustomerEmail method, of class Customer.
     @Test
     public void testSetCustomerEmail() {
         System.out.println("setCustomerEmail");
@@ -61,9 +57,7 @@ public class CustomerTest {
         Instance.setCustomerEmail(CustomerEmail);
     }
 
-    /**
-     * Test of setCustomerPhone method, of class Customer.
-     */
+    // Test of setCustomerPhone method, of class Customer.
     @Test
     public void testSetCustomerPhone() {
         System.out.println("setCustomerPhone");
@@ -72,9 +66,7 @@ public class CustomerTest {
         Instance.setCustomerPhone(CustomerPhone);
     }
 
-    /**
-     * Test of setCustomerAddress method, of class Customer.
-     */
+    // Test of setCustomerAddress method, of class Customer.
     @Test
     public void testSetCustomerAddress() {
         System.out.println("setCustomerAddress");
@@ -83,9 +75,7 @@ public class CustomerTest {
         Instance.setCustomerAddress(CustomerAddress);
     }
 
-    /**
-     * Test of getCustomerName method, of class Customer.
-     */
+    // Test of getCustomerName method, of class Customer.
     @Test
     public void testGetCustomerName() {
         System.out.println("getCustomerName");
@@ -95,9 +85,7 @@ public class CustomerTest {
         assertEquals(expResult, result);
     }
 
-    /**
-     * Test of getCustomerPassword method, of class Customer.
-     */
+    // Test of getCustomerPassword method, of class Customer.
     @Test
     public void testGetCustomerPassword() {
         System.out.println("getCustomerPassword");
@@ -107,9 +95,7 @@ public class CustomerTest {
         assertEquals(expResult, result);
     }
     
-    /**
-     * Test of searchForBook method, of class Customer.
-     */
+    // Test of searchForBook method, of class Customer.
     @Test(timeout=90)
     public void testSearchForBook() {
         System.out.println("searchForBook");
@@ -121,8 +107,6 @@ public class CustomerTest {
         Customer object =new Customer();
         Book result = object.searchForBook(bookList,name);
         assertEquals(expResult, result);
-       
-      
     }
       
     //Use NullObject method to testing
@@ -135,8 +119,7 @@ public class CustomerTest {
         bookList.add(instance);
         Customer object =new Customer();
         Book result = object.searchForBook(bookList, name);
-        assertNull(result);
-      
+        assertNull(result);  
     }
     
 }
