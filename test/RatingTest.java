@@ -31,6 +31,20 @@ public class RatingTest {
     @After
     public void tearDown() {
     }
+    
+    /**
+     * Test of setStars method, of class Rating.
+     */
+    @Test
+    public void testSetStars() {
+        System.out.println("setStars");
+        int stars = 5;
+        Rating instance = new Rating(5, "Thanks");
+        instance.setStars(stars);
+        int expResult = 5;
+        int result = instance.getStars();
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of getStars method, of class Rating.
@@ -38,25 +52,23 @@ public class RatingTest {
     @Test
     public void testGetStars() {
         System.out.println("getStars");
-        Rating instance = new Rating();
-        int expResult = 0;
+        Rating instance = new Rating(4, "Everythin was good");
+        int expResult = 4;
         int result = instance.getStars();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-
     /**
-     * Test of setStars method, of class Rating.
+     * Test of setRate method, of class Rating.
      */
     @Test
-    public void testSetStars() {
-        System.out.println("setStars");
-        int stars = 0;
-        Rating instance = new Rating();
-        instance.setStars(stars);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testSetRate() {
+        System.out.println("setRate");
+        String rate = "No comments, Thanks";
+        Rating instance = new Rating(3,"No comments, Thanks");
+        instance.setRate(rate);
+        String expResult = "No comments, Thanks";
+        String result = instance.getRate();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -65,25 +77,12 @@ public class RatingTest {
     @Test
     public void testGetRate() {
         System.out.println("getRate");
-        Rating instance = new Rating();
-        String expResult = "";
+        Rating instance = new Rating(5, "Pdrfect application!");
+        String expResult = "Pdrfect application!";
         String result = instance.getRate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setRate method, of class Rating.
-     */
-    @Test
-    public void testSetRate() {
-        System.out.println("setRate");
-        String rate = "";
-        Rating instance = new Rating();
-        instance.setRate(rate);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    
     
 }

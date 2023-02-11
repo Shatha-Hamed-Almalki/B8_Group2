@@ -10,6 +10,11 @@ public class Rating {
     public Rating() {
     }
 
+    public Rating(int stars, String rate) {
+        this.stars = stars;
+        this.rate = rate;
+    }
+
     public int getStars() {
         return stars;
     }

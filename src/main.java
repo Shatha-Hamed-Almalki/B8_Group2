@@ -224,6 +224,7 @@ public class main {
                     break;
                 case 5:
                     Scanner input = new Scanner(System.in);
+                    Scanner input5 = new Scanner(System.in);
                     Scanner scan = new Scanner(myFile);
                     System.out.print("Please enter your order number:");
                     String yourOrdernum = input.next();
@@ -251,7 +252,7 @@ public class main {
                             }
                             
                             System.out.println("Please give us any notes/ recommendations:");
-                            input.nextLine();
+                            input5.nextLine();
                             rating.setRate(input.nextLine());
                             System.out.println("\n--------------------------------------");
                             System.out.println("We have recieved your feedback!");
